@@ -23,3 +23,7 @@ class BasePage:
         # The * deconstructs the tuple created in the base page locator and passes it as two different values
         # because find_element takes two arguments
         return self.driver.find_element(*BasePageLocators.TITLE)
+
+    @property
+    def navigation(self):
+        return self.driver.find_elements(*BasePageLocators.NAV_LINKS)
